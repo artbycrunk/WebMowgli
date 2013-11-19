@@ -1,0 +1,131 @@
+body {
+	background-color: #EEEEEE;
+}
+
+.categ-holders, .categ-holders.highlight-visible-1, .categ-holders.highlight-visible-0
+{
+	float: left;
+	/*margin-left: 10px;*/
+	/*width: 128px;*/
+	width: 200px;
+	height: 45px;
+}
+
+#categ-list .thumbnail
+{
+	height:35px;
+}
+
+#categ-list .thumbnail img
+{
+	float: left;
+	width: 50px;
+	height: 32px;
+}
+
+#categ-list .thumbnail h3
+{
+	float: left;
+	font-size: 20px;
+	padding-left: 10px;
+	position: relative;
+	top: -15px;
+}
+
+.image-holders.highlight-visible-1, .image-holders.highlight-visible-0
+{
+	float: left;
+	margin-left: 10px;
+	width: 128px;
+}
+
+#category-container {
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+.image-holders img {
+	max-height: 73px;
+	max-width: 118px;
+}
+
+#image-buttons, #category-buttons
+{
+	padding: 10px;
+}
+
+/* Overriding Css picked up from style.css */
+[class^="icon-"], [class*=" icon-"] {
+	/*background-image: url("{admin:resource}/images/glyphicons-halflings.png");*/
+	background-image: url("../images/glyphicons-halflings.png");
+	background-repeat: no-repeat;
+}
+
+/* Highlights */
+
+.highlight-standby {
+	border-color: #F29F1A;
+	box-shadow: 0 1px 3px 2px rgba(255, 150, 0, 0.5);
+	cursor: pointer;
+}
+
+.highlight-selected, li.categ-holders:hover, li.image-holders:hover {
+	border-color: #0088CC;
+	box-shadow: 0 1px 3px 2px rgba(0, 105, 214, 0.5);
+	opacity:1.0;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+	cursor: pointer;
+}
+
+.highlight-visible-0
+{
+	opacity:0.25;
+	filter:alpha(opacity=25); /* For IE8 and earlier */
+}
+
+.thumbnails > li.placeholder-images {
+	float: left;
+	margin-left: 8px;
+	width: 10px;
+	height: 83px;
+	/*background-color: red;*/
+	display: block;
+}
+.thumbnails > li.placeholder-images:hover {
+	width: 10px;
+	background-color: grey;
+}
+
+/*
+@media only screen
+and (min-width : 768px) {
+
+	#category-container {
+	    float: left;
+	    width: 25%;
+	}
+
+	#image-container {
+		float: left;
+		width: 75%;
+	}
+
+}
+*/
+@media only screen
+and (min-width : 768px/*1224px*/) {
+
+	#category-container {
+		border-right: 1px dotted #CCCCCC;
+		border-bottom: 1px none;
+		float: left;
+		width: 250px;
+	}
+
+	#image-container {
+		float: left;
+		padding-left: 5px;
+		width: 60%;
+	}
+
+}
+

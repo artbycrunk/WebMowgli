@@ -1,0 +1,1 @@
+<wm-editor id="{id}" class="wm-editable-content" content_id="{id}" post_url="{post_url}">{content}</wm-editor>

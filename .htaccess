@@ -1,0 +1,51 @@
+RewriteEngine on
+
+# Set RedirectBase path
+# add relative directory path from root directory ( i.e. directory which contains index.php )
+# Eg. if installation is made in /sub_dir
+# Eg. /sub_dir/
+
+RewriteBase /
+
+
+# Do not allow directory access
+Options -Indexes
+
+
+# Remove www from domain
+
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L,NC,QSA]
+
+
+# Remove html, htm, xhtml from uri - anywhere in the string
+
+RewriteCond %{REQUEST_URI} \.(html|htm|xhtml)?
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\.(html|htm|xhtml)(.*)$ $1$3 [R=301,L,NC,QSA]
+
+
+# Remove index.php from url - add index.php to beginning of uri
+
+RewriteCond $1 !^(index\.php|resources|css|js|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+
+# Compress static files
+<ifModule mod_deflate.c>
+# DEFLATE by type - html, text, css, xml
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+
+# DEFLATE by type - javascript
+AddOutputFilterByType DEFLATE application/x-javascript application/javascript text/javascript text/x-js text/x-javascript
+
+# DEFLATE by extension
+AddOutputFilter DEFLATE js css htm html xml
+</ifModule>
+
+# PENDING
+# prevent hotlinking
+# only remove first occurance of .html
+

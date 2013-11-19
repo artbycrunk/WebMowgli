@@ -1,0 +1,52 @@
+/*************** INplace editor *************/
+.editable {
+}
+.editable .options {
+	display:none;
+ 	background: none repeat scroll 0 0 white;
+    border: 1px solid red;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 42px;
+}
+.editable .options ul {
+	padding: 0;
+	margin: 0;
+}
+.editable .options ul li {
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    text-align: right;
+    width: 20px;
+}
+.editable .options ul li a {
+    color: #109F13;
+    display: block;
+    font-size: 13px;
+    line-height: 1.2em;
+    padding: 8px;
+}
+
+/*.editable-content{border:2px solid transparent;} */
+/* .editable-content:hover{border:2px dashed #09F;} */
+
+/* Z-index of #mask must lower than #boxes .window */
+#mask {
+  position:absolute;
+  z-index:80;
+  background-color:#FFF;
+  display:none;
+  opacity:0;
+}
+/********************************      tinyMCE      ********************************/
+.tinyMCE-baseClass{ 
+position:absolute;
+z-index:90;
+
+-moz-box-shadow:10px 10px 23px #888888;
+-webkit-box-shadow: 10px 10px 23px #888888;
+box-shadow:10px 10px 23px #888888;
+
+}

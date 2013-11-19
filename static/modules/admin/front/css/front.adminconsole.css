@@ -1,0 +1,87 @@
+/*************************************************************************************/
+/********************************      BASE     **************************************/
+/*************************************************************************************/
+
+@font-face {	font-family: Delicious-Bold;	font-weight: bold;	src: url('Delicious-Bold.otf'); 	}
+
+@font-face {	font-family: Delicious-Roman;	font-weight: bold;	src: url('Delicious-Roman.otf');	}
+
+#eac-dashboard {
+    display: none;
+    position: fixed;
+    width: 275px;
+    z-index: 99999;
+}
+	#eac-d-header{}
+		#d-h-bar{
+			font: 13px/27px Arial,sans-serif;
+    		height: 30px;}
+			#d-h-wrapper{}
+				#d-h-w-container_left,#d-h-w-container_right{
+					background: none repeat scroll 0 0 #040404;
+					height: 27px;
+					position: absolute;
+					top: 0;
+					white-space: nowrap;
+					z-index: 1000;
+				}
+				#d-h-w-container_left{
+					float: left;
+					left: 0;
+					padding: 0 0 0 4px;
+				}
+				#d-h-w-container_left ol{
+					display: block;
+					list-style: none outside none;
+					margin: 0;
+					padding: 0;
+				}
+				#d-h-w-container_left ol li{
+					float:left;
+                                        font-size: 10px;
+					line-height: 24px;
+					height: 24px;
+					position: relative;
+					vertical-align: top;
+					border-top: 1px solid #000;
+				}
+				#d-h-w-container_left ol li:hover{
+					border-top: 1px solid #CBCBCB;
+				}
+				#d-h-w-container_left ol li.d-h-w-c-seperator span{
+					background: none repeat scroll 0 0 #717171;
+					display:block;
+					height: 18px;
+					margin: 3px 0;
+					padding: 0;
+					width: 1px;
+				}
+				#d-h-w-container_left ol li a.item_title {
+					color: #E7E7E7 !important;
+					cursor: pointer;
+					display: block;
+					height: 26px;
+					padding: 0 6px;
+					text-decoration: none !important;
+				}
+				#d-h-w-container_left ol li a.item_title:hover{
+                                        background: none repeat scroll 0 0 #0B75B2;
+                                        color: #FFFFFF !important;
+                                }
+				#d-h-w-container_left ol li div.d-h-w-c-item_dropdown{
+					display:none;
+					background: none repeat scroll 0 0 transparent;
+					position: absolute;
+					text-align: left;
+					z-index: 999;
+				}
+				div.d-h-w-c-i-msg{
+					display:none;
+					text-align: center;
+				}
+				#d-h-w-container_right{}
+
+#arrow_button{text-align: center;width: 26px;}
+#arrow_button span.left_arrow{display:none}
+#arrow_button span.right_arrow{display:block}
+

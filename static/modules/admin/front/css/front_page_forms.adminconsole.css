@@ -1,0 +1,393 @@
+/*
+ * Identical to the front page-admin module
+ */
+
+
+/*
+ * Global CSS
+ */
+/********************************      Basic Structure      ********************************/
+
+html {
+	font-size: 100%;
+	height: 100%;
+	margin-bottom: 1px; /* Always show a scrollbar to avoid jumping when the scrollbar appears  */
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #555;
+	background: #f0f0f0 url(../images/backgrounds/white-noise-bg.jpg) top left repeat;
+	font-size: 12px;
+    height: 100%;
+    width: auto;
+}
+/********************************      Elements styling      ********************************/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #222;
+	font-weight: bold;
+}
+h1 {
+	font-family: Calibri, Helvetica, Arial, sans-serif;
+	font-size: 31px;
+	font-weight: bold;
+	color: #fff;
+	position: absolute;
+	top: -1000px;  /* Remove this line and delete the logo (in the HTML) if you don't want an image as a logo */
+}
+h2 {
+	font-size: 26px;
+	padding: 0 0 10px 0;
+}
+h3 {
+	font-size: 17px;
+	padding: 0 0 10px 0;
+}
+h4 {
+	font-size: 16px;
+	padding: 0 0 5px 0;
+}
+h5 {
+	font-size: 14px;
+	padding: 0 0 5px 0;
+}
+h6 {
+	font-size: 12px;
+	padding: 0 0 5px 0;
+}
+a {
+	color: #2D71C4;
+	text-decoration: none;
+}
+a:hover {
+	color: #000;
+}
+a:active {
+	color: #777;
+}
+a:focus {
+	outline: 1px;
+}
+strong {
+	font-weight: bold;
+	color: #333;
+}
+small {
+	font-size: 0.85em;
+}
+pre {
+	font-family: monospace;
+}
+p {
+	padding: 5px 0 10px 0;
+	line-height: 1.6em;
+}
+/********************************      General Classes      ********************************/
+
+.clear {
+	clear: both;
+}
+.align-left {
+	float: left;
+}
+.align-right {
+	float: right;
+}
+.hide{display:none}
+
+/* msg_type classes: status, error, ..*/
+div#notification-container div.information{color: #2F6597;}
+div#notification-container div.warning{color:#030303;}
+div#notification-container div.success{color: #598201;}
+div#notification-container div.error{color: #C40000;}
+
+.information{color: #2F6597;}
+.warning{color:#030303;}
+.success{color: #598201;}
+.error{color: #CC0000;}
+
+
+/* Chrome outline fix*/
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/* Mozilla required=true outline fix*/
+input:invalid {
+    -moz-box-shadow: none;
+}
+
+
+.spinner{ background:url("../../admin/images/ajax/ajax-loader.gif") repeat scroll 0 0 transparent;
+height: 16px;
+width: 16px;}
+
+body{
+font:Tahoma, Geneva, sans-serif; 
+
+}
+
+
+       /*** Buttons ***/
+
+.menu-button-item-blue, .menu-button-item-red {
+    cursor: pointer;
+    display: block;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 13px;
+    height: auto;
+    margin: 5px 5px 0 0;
+    min-height: 18px;
+    min-width: 40px;
+    padding: 5px 6px 4px;
+    text-align: center;
+    width: 62px;
+
+	text-shadow: 0 1px 2px #3D3D3D;	
+	-moz-border-radius: 3px;
+	border-radius: 3px;	
+}
+/* Blue */
+.menu-button-item-blue {
+	background-color: #375AE8;
+    background-image: -moz-linear-gradient(center top , #4D90FE, #4787ED);
+    border: 1px solid #3079ED;
+    color: #FFFFFF;
+}
+
+.menu-button-item-blue:hover {
+	background-color: #375AE8;
+    background-image: -moz-linear-gradient(center top , #4D90FE, #357AE8);
+    border: 1px solid #3079ED;
+}
+
+/* Red */
+
+.menu-button-item-red {
+    background-color: #D14836;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #D14836);
+	border: 1px solid #B0281A;
+    color: #FFFFFF;
+}
+
+.menu-button-item-red:hover {
+    background-color: #C53727;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #C53727);
+	border: 1px solid #B0281A;
+}
+
+
+/* Page layout*/
+
+#form-wrapper {
+    background: none repeat scroll 0 0 white;
+    border: 4px solid #F1F1F1;
+    margin: 0 auto;
+    width: 362px;
+	
+	-moz-box-shadow: 0 3px 8px #818181;
+    box-shadow: 0 3px 8px #818181;
+}
+
+#form-header {
+	border-bottom: 1px solid #CFCDCD;
+	display: block;
+	font-family: Tahoma,Geneva,sans-serif;
+	font-size: 13px;
+	height: 44px;
+	overflow: hidden;
+	position: relative;
+	
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f2f2e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f2e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f2f2e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f2f2e8 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%,#f2f2e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2e8',GradientType=0 ); /* IE6-9 */
+}
+
+#form-header span{
+    position: absolute;
+}
+
+
+#form{
+    margin: 0 auto;
+    width: 290px;
+}
+
+.form_inline_msgbox {
+    display: none;
+    font-size: 11px;
+    font-style: italic;
+    margin: 4px 0 5px 3px;
+    text-align: right;
+}
+
+.form_field_label {
+    color: #AEAEAE;
+    font-size: 11px;
+    position: absolute;
+    text-align: left;
+    top: -14px;
+}
+
+#server_error_msgs {
+    display: none;
+    font-size: 15px;
+    font-style: italic;
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+
+.form_text_fields{
+    background: none repeat scroll 0 0 white;
+    border-width: 0;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    left: 12px;
+    padding: 3px;
+    position: relative;
+    top: 6px;
+    width: 258px;
+}
+
+.form_field_container{
+    display: block;
+    height: auto;
+    margin: 20px 0 5px;
+    position: relative;
+    width: 290px;
+}
+
+	.form_field_container2 {
+    border: 3px solid #F2F5F7;
+    height: 37px;
+    position: relative;
+    width: 290px;
+	}
+
+		.form_field_container3 {
+		border: 1px solid #BABABA;
+		height: 35px;
+		}
+
+
+
+/*
+ * 'Login' page specific CSS
+ */
+
+body.login #form-header span{
+    margin: 13px 0 0 95px;
+}
+
+
+.form_field_container{
+}
+
+	.form_field_container2 {
+	}
+
+	#usr {}
+		#username{display:block;}
+#container_password{}
+	#pwd {}
+		#password{	display:block;}
+
+#reset {
+    display: block;
+    font-size: 12px;
+    margin: 20px auto 0;
+    text-align: center;
+	font-family:Tahoma,Geneva,sans-serif;
+}
+
+#reset span{ font:12px; font-weight:bold;}
+#reset a{ color:#555555; text-decoration:none; }
+#reset a:hover{ color:#333; text-decoration:underline;}
+
+.focus .form_field_container2  {border: 3px solid #D5EDFF;}
+.focus .form_field_container2  .form_field_container3{border: 1px solid #83A1FB;}
+.focus .form_field_container2  .form_field_container3 .form_text_fields { color: #555555;}
+
+.error_here .form_field_container2 {border: 3px solid #FED5D5;}
+.error_here .form_field_container2 .form_field_container3{border: 1px solid #FC5B5B;}
+.error_here .form_field_container2 .form_field_container3 .form_text_fields{ color: #555555;}
+.form_inline_msgbox{ color:#CC0000}
+
+#lower-form {
+    display: block;
+    margin: 22px 0 0;
+    position: relative;
+}
+#remember-me {
+    display: none;
+    float: left;
+    font-family: Tahoma;
+    font-size: 11px;
+    padding: 3px 0 0;
+    text-align: justify;
+    width: 210px;
+}
+
+#submit-btn {
+    float: right;
+    margin: 0 5px 10px 0;
+}
+
+
+input[name="username"], input[name="password"] {
+}
+
+
+
+
+
+
+/*
+ * 'Reset Password' page specific CSS
+ */
+
+/*Overwriting*/
+body.reset_password #form-header span {
+    margin: 13px 0 0 125px;
+}
+
+
+body.reset_password #submit-btn {width: 122px;}
+
+
+
+
+
+/*
+ * 'changepassword' page specific CSS
+ */
+
+body.changepassword #form-header span {
+    margin: 13px 0 0 125px;
+}
+
+
+body.changepassword #submit-btn {width: 130px;}
+
+
+
+/*
+ * 'register' page specific CSS
+ */
+
+body.register #form-header span {
+    margin: 13px 0 0 152px;
+}
+
+
+body.register #submit-btn {width: 98px;}
+

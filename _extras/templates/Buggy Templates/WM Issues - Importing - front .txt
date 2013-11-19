@@ -1,0 +1,23 @@
+======================
+ISSUES NOTICED ( General )
+======================
+
+- edit button ( of Content Editor ) is affected by css on page, looks different for different templates
+
+
+
+======================
+ISSUES noticed ( Water )
+======================
+
+- Jquery Version -- theme is using version 1.3, clash with $.delay() when in admin mode. scripts stop working
+- Content Editor Does NOT open in place ( opens below actual content )
+- Cufon fonts add css to specific elements, this shows up in Content Editor, causes problems
+- unable to close content editor, by clicking outside CE
+
+
+======================
+Issues Noticed ( empower )
+======================
+
+- Content editor breaks surrounding blocks

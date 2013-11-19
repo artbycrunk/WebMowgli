@@ -1,0 +1,477 @@
+<!DOCTYPE  html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/social-icons.css" type="text/css" media="screen" />
+		<!-- ENDS CSS -->
+
+		<!--[if IE]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- ENDS JS -->
+
+		<!-- JS -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/slider.js"></script>
+
+		<script type="text/javascript">
+			// Variable to store the img/slider we need to set as background
+			var photos = [
+				{
+					"image" : "{site:resource}/img/bg/spaces.jpg",
+					"color" : "#000000"
+				},
+				{
+					"image" : "{site:resource}/img/bg/grunge.jpg",
+					"color" : "#ffffff"
+				},
+				{
+					"image" : "{site:resource}/img/bg/blue.jpg",
+					"color" : "#ffffff"
+				},
+				{
+					"image" : "{site:resource}/img/bg/twilight.jpg",
+					"color" : "#000000"
+				},
+				{
+					"image" : "{site:resource}/img/bg/rainbow.jpg",
+					"color" : "#ffffff"
+				}
+			];
+
+		</script>
+
+		<script src="js/slides/source/slides.min.jquery.js"></script>
+		<script src="js/quicksand.js"></script>
+
+		<!-- superfish -->
+		<link rel="stylesheet" media="screen" href="css/superfish.css" />
+		<script type="text/javascript" src="js/superfish-1.4.8/js/hoverIntent.js"></script>
+		<script type="text/javascript" src="js/superfish-1.4.8/js/superfish.js"></script>
+		<script type="text/javascript" src="js/superfish-1.4.8/js/supersubs.js"></script>
+		<!-- ENDS superfish -->
+
+		<!-- poshytip -->
+		<link rel="stylesheet" href="js/poshytip-1.0/src/tip-twitter/tip-twitter.css" type="text/css" />
+		<link rel="stylesheet" href="js/poshytip-1.0/src/tip-yellowsimple/tip-yellowsimple.css" type="text/css" />
+		<script type="text/javascript" src="js/poshytip-1.0/src/jquery.poshytip.min.js"></script>
+		<!-- ENDS poshytip -->
+
+		<!-- Tweet -->
+		<link rel="stylesheet" href="css/jquery.tweet.css" media="all"  type="text/css"/>
+		<script src="js/tweet/jquery.tweet.js" type="text/javascript"></script>
+		<!-- ENDS Tweet -->
+
+		<!-- prettyPhoto -->
+		<script type="text/javascript" src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+		<link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen" />
+		<!-- ENDS prettyPhoto -->
+
+		<!-- GOOGLE FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400italic' rel='stylesheet' type='text/css'>
+
+
+	</head>
+	<body>
+
+	<extract id="includes:background-images" block="background images">
+
+		<!-- Dynamic Background -->
+		<div id="headerimgs">
+			<div id="headerimg1" class="headerimg"></div>
+			<div id="headerimg2" class="headerimg"></div>
+		</div>
+		<!-- ENDS Dynamic Background -->
+
+		<!-- background nav -->
+		<div id="headernav">
+			<div id="back" class="btn"></div>
+			<div id="next" class="btn"></div>
+		</div>
+		<!-- ENDS background nav -->
+
+		<div id="top-gap"></div>
+
+	</extract>
+
+
+
+	<!-- wrapper -->
+	<div class="wrapper">
+
+		<extract id="includes:navigation" block="navigation" >
+
+			<extract id="content:article" block="logo">
+				<a href="index.html"><img  id="logo" src="img/logo.png" alt="WebMowgli Demo"></a>
+			</extract>
+
+
+			<!-- nav bar holder -->
+			<div id="nav-bar-holder">
+
+				<extract id="content:article" block="navigation_menu">
+					<!-- Navigation -->
+					<ul id="nav" class="sf-menu">
+						<li class=""><a href="index.html">Home</a></li> <!-- current item : class='current-menu-item' -->
+						<li><a href="gallery.html">Gallery</a>
+							<ul>
+								<li><a href="gallery.html">Images</a></li>
+								<li><a href="videos.html">Videos</a></li>
+							</ul>
+						</li>
+						<li><a href="events.html">Events</a></li>
+						<li><a href="music.html">Music</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<!-- ENDS Navigation -->
+				</extract>
+
+				<extract id="content:article" block="navigation_social">
+					<!-- Social -->
+					<ul class="social">
+						<li><a href="http://www.facebook.com/encubetech" class="poshytip  facebook" title="Become a fan"></a></li>
+						<li><a href="http://www.twitter.com/encubetech" class="poshytip  twitter" title="Follow my tweets"></a></li>
+						<!-- <li><a href="http://www.dribbble.com" class="poshytip  dribbble" title="Working on..."></a></li> -->
+					</ul>
+					<!-- ENDS Social -->
+				</extract>
+
+			</div>
+			<!-- ENDS nav bar holder -->
+
+		</extract>
+
+		<!-- content wrap -->
+		<div id="content-wrap">
+
+			<!-- Page wrap -->
+			<div id="page-wrap">
+
+				<!-- Front slider -->
+				<div id="front-slides">
+					<div class="slides_container">
+						<div class="slide">
+							<img src="img/dummies/940x370.jpg" alt="pic" width="940" height="360"  />
+							<div class="caption">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.</div>
+						</div>
+						<div class="slide">
+							<img src="img/dummies/940x370.jpg" alt="pic" width="940" height="360"  />
+							<div class="caption">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.</div>
+						</div>
+						<div class="slide">
+							<img src="img/dummies/940x370.jpg" alt="pic" width="940" height="360"  />
+							<div class="caption">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.</div>
+						</div>
+					</div>
+
+					<div id="front-slides-cover"></div>
+
+					<!-- Headline -->
+					<div id="headline"><h6></h6></div>
+					<!-- ENDS Headline -->
+
+				</div>
+				<!-- ENDS Front slider -->
+
+
+				<!-- Reel slider -->
+				<div id="reel">
+					<div class="slides_container">
+
+						<div class="slide-box">
+							<div class="box-container">
+								<extract id="content:article">
+									<img src="img/mono-icons/bargraph32.png" class="box-icon" alt="pic"/>
+									<h6>Pellentesque morbi</h6>
+									<div class="box-divider"></div>Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.
+								</extract>
+
+							</div>
+							<div class="box-container">
+
+								<extract id="content:article">
+									<img src="img/mono-icons/boxupload32.png" class="box-icon" alt="pic"/>
+									<h6>Pellentesque morbi</h6>
+									<div class="box-divider"></div>Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.
+								</extract>
+							</div>
+							<div class="box-container">
+								<extract id="content:article">
+									<img src="img/mono-icons/article32.png" class="box-icon" alt="pic"/>
+									<h6>Pellentesque morbi</h6>
+									<div class="box-divider"></div>Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.
+
+								</extract>
+
+							</div>
+						</div>
+
+						<div class="slide-box">
+							<div class="box-container">
+								<extract id="content:article">
+									<img src="img/mono-icons/circleright32.png" class="box-icon" alt="pic"/>
+									<h6>Pellentesque morbi</h6>
+									<div class="box-divider"></div>Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.
+
+								</extract>
+
+							</div>
+							<div class="box-container">
+								<extract id="content:article">
+									<img src="img/mono-icons/exchange32.png" class="box-icon" alt="pic"/>
+									<h6>Pellentesque morbi</h6>
+									<div class="box-divider"></div>Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.
+
+								</extract>
+
+							</div>
+							<div class="box-container">
+
+								<extract id="content:article">
+									<img src="img/mono-icons/cup32.png" class="box-icon" alt="pic"/>
+									<h6>Pellentesque morbi</h6>
+									<div class="box-divider"></div>Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.
+
+								</extract>
+							</div>
+						</div>
+
+						<div class="slide-box">
+
+							<div class="box-container">
+								<extract id="content:article">
+									<img src="img/mono-icons/folder32.png" class="box-icon" alt="pic"/>
+									<h6>Pellentesque morbi</h6>
+									<div class="box-divider"></div>Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.
+
+								</extract>
+
+							</div>
+							<div class="box-container">
+								<extract id="content:article">
+									<img src="img/mono-icons/heart32.png" class="box-icon" alt="pic"/>
+									<h6>Pellentesque morbi</h6>
+									<div class="box-divider"></div>Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.
+
+								</extract>
+
+							</div>
+							<div class="box-container">
+								<extract id="content:article">
+									<img src="img/mono-icons/lightbulb32.png" class="box-icon" alt="pic"/>
+									<h6>Pellentesque morbi</h6>
+									<div class="box-divider"></div>Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est tristique senectus et netus et malesuada.
+
+								</extract>
+
+							</div>
+						</div>
+
+					</div>
+					<a href="#" class="prev"></a>
+					<a href="#" class="next"></a>
+				</div>
+				<!-- ENDS Reel slider -->
+
+
+
+				<!-- Featured -->
+				<div class="featured-title">
+					<div class="ribbon"><span>Featured content</span></div>
+				</div>
+
+				<ul class="featured-posts">
+					<li>
+					<extract id="content:article">
+						<a href="blog-post.html" class="thumb" title="An image"><img src="img/dummies/290x170.jpg" alt="Post" /></a>
+					</extract>
+					<div class="excerpt">
+						<div class="heading">
+							<extract id="content:article">
+								<a href="blog-post.html">Pellentesque habitant morbi</a>
+							</extract>
+						</div>
+						<extract id="content:article">
+							Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam. Donec eu libero sit amet quam egestas semper.
+						</extract>
+					</div>
+					</li>
+					<li>
+					<extract id="content:article">
+						<a href="blog-post.html" class="thumb" title="An image"><img src="img/dummies/290x170.jpg" alt="Post" /></a>
+					</extract>
+					<div class="excerpt">
+						<div class="heading">
+							<extract id="content:article">
+								<a href="blog-post.html">Pellentesque habitant morbi</a>
+							</extract>
+						</div>
+						<extract id="content:article">
+							Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam. Donec eu libero sit amet quam egestas semper.
+						</extract>
+					</div>
+					</li>
+					<li>
+					<extract id="content:article">
+						<a href="blog-post.html" class="thumb" title="An image"><img src="img/dummies/290x170.jpg" alt="Post" /></a>
+					</extract>
+					<div class="excerpt">
+						<div class="heading">
+							<extract id="content:article">
+								<a href="blog-post.html">Pellentesque habitant morbi</a>
+							</extract>
+						</div>
+						<extract id="content:article">
+							Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam. Donec eu libero sit amet quam egestas semper.
+						</extract>
+					</div>
+					</li>
+					<li>
+					<extract id="content:article">
+						<a href="blog-post.html" class="thumb" title="An image"><img src="img/dummies/290x170.jpg" alt="Post" /></a>
+					</extract>
+					<div class="excerpt">
+						<div class="heading">
+							<extract id="content:article">
+								<a href="blog-post.html">Pellentesque habitant morbi</a>
+							</extract>
+						</div>
+						<extract id="content:article">
+							Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam. Donec eu libero sit amet quam egestas semper.
+						</extract>
+					</div>
+					</li>
+					<li>
+					<extract id="content:article">
+						<a href="blog-post.html" class="thumb" title="An image"><img src="img/dummies/290x170.jpg" alt="Post" /></a>
+					</extract>
+					<div class="excerpt">
+						<div class="heading">
+							<extract id="content:article">
+								<a href="blog-post.html">Pellentesque habitant morbi</a>
+							</extract>
+						</div>
+						<extract id="content:article">
+							Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam. Donec eu libero sit amet quam egestas semper.
+						</extract>
+					</div>
+					</li>
+					<li>
+					<extract id="content:article">
+						<a href="blog-post.html" class="thumb" title="An image"><img src="img/dummies/290x170.jpg" alt="Post" /></a>
+					</extract>
+					<div class="excerpt">
+						<div class="heading">
+							<extract id="content:article">
+								<a href="blog-post.html">Pellentesque habitant morbi</a>
+							</extract>
+						</div>
+						<extract id="content:article">
+							Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam. Donec eu libero sit amet quam egestas semper.
+						</extract>
+					</div>
+					</li>
+
+				</ul>
+				<div class="clear"></div>
+				<!-- ENDS Featured -->
+
+
+			</div>
+			<!-- ENDS Page wrap -->
+
+		</div>
+		<!-- ENDS content wrap -->
+
+	</div>
+	<!-- ENDS Wrapper -->
+
+	<!-- FOOTER -->
+	<div id="footer">
+
+		<extract id="includes:footer" block="footer" >
+			<div class="footer-wrapper">
+
+
+				<!-- footer-cols -->
+				<ul id="footer-cols">
+					<li>
+					<extract id="content:article">
+
+						<h6>About the theme</h6>
+						<p>Pellentesque accumsan porttitor, accumsan porttitor ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Tincidunt quis, accumsan porttitor facilisis habitant morbi tristique senectus accumsan porttitor et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam,  Aenean ultricies mi vitae est. Tincidunt quis feugiat vitae.</p>
+						<p>Accumsan porttitor ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Tincidunt quis, accumsan porttitor, <a href="http://luiszuno.com">luiszuno.com</a>.</p>
+					</extract>
+					</li>
+					<li>
+					<extract id="content:article">
+						<h6>Categories</h6>
+						<ul>
+							<li><a href="#">Webdesign in this era</a></li>
+							<li><a href="#/">Wordpress core techniques</a></li>
+							<li><a href="#">Photo editing</a></li>
+							<li><a href="#">Code in php</a></li>
+							<li><a href="#">Drawings by hand</a></li>
+							<li><a href="#">Buy Themeforest items</a></li>
+							<li><a href="#">Lorem ipsum dolor amet</a></li>
+							<li><a href="#">Tincidunt quis, accumsan porttitor</a></li>
+							<li><a href="#">Donec eu libero sit amet quam</a></li>
+						</ul>
+					</extract>
+
+					</li>
+					<li>
+					<extract id="content:article">
+						<div id="tweets" class="footer-col tweet">
+							<h6>Twitter widget</h6>
+						</div>
+					</extract>
+
+					</li>
+				</ul>
+				<!-- ENDS footer-cols -->
+
+				<div id="footer-glare"></div>
+
+			</div>
+		</extract>
+	</div>
+	<!-- ENDS FOOTER -->
+
+	<!-- footer-bottom -->
+	<div id="footer-bottom">
+
+		<extract id="includes:footer-bottom" block="footer-bottom" >
+			<div class="bottom-wrapper">
+				<div id="bottom-left">
+					Powered by <a href="http://webmowgli.com"><b>Webmowgli</b></a>
+				</div>
+				<div id="bottom-right">
+					<extract id="content:article">
+						<ul id="footer-nav">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="gallery.html">Images</a></li>
+							<li><a href="videos.html">Videos</a></li>
+							<li><a href="events.html">Events</a></li>
+							<li><a href="music.html">Music</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</extract>
+
+				</div>
+			</div>
+		</extract>
+	</div>
+	<!-- ENDS footer-bottom -->
+
+</body>
+</html>
